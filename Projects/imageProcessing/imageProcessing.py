@@ -8,9 +8,14 @@ import cv2
 source=cv2.VideoCapture(r'C:\Users\buthm\Downloads\drive-download-20251102T091203Z-1-001\codes\Samples\road_drive.avi')
 while(True):
     ret,img=source.read()
-    print(ret)
+    # print(ret)
     if(ret==False):
         break
     cv2.imshow('IMG',img)
-    cv2.waitKey(1)
+    key=cv2.waitKey(1)
+    if(key==27):
+        break
+    elif(key==C112):
+        cv2.waitKey(0)
+
 cv2.destroyAllWindows()
